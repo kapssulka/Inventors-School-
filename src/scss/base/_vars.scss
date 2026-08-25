@@ -1,0 +1,22 @@
+//! Colors
+$color-primary: #2563a6; // Основной синий — основные элементы, ссылки
+$color-primary-dark: #174a7c; // Тёмный синий — hover, тёмные акценты
+$color-primary-light: #eaf3fb; // Светлый синий — фоны, выделения
+
+$color-accent: #f28c28; // Оранжевый — CTA, кнопки, акценты
+$color-accent-hover: #d97817; // Оранжевый hover — кнопки, ссылки
+$color-accent-light: #fff3e4; // Светлый оранжевый — мягкие выделения
+
+$color-bg: #ffffff; // Основной фон
+$color-bg-secondary: #f7f9fc; // Вторичный фон — секции, блоки
+
+$color-text: #172b3a; // Основной текст
+$color-text-secondary: #607080; // Вторичный текст — подписи, описания
+$color-border: #dde5ec; // Границы — карточки, инпуты, разделители
+
+$color-success: #2e8b57; // Успешное состояние
+$color-success-light: #eaf6f0; // Фон успешного состояния
+
+// Typography
+$font-primary: "Manrope", sans-serif; // Основной шрифт
+$font-quote: "Lora", serif; // Шрифт для цитат

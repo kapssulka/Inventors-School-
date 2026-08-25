@@ -1,0 +1,226 @@
+@use "./../base/vars" as *;
+
+.about {
+  padding: 72px 0;
+
+  background: $color-bg;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Intro
+
+  &__intro {
+    max-width: 700px;
+    margin-bottom: 40px;
+  }
+
+  // Main cards
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px 16px;
+  }
+
+  // Additional section
+
+  &__additional {
+    margin-top: 56px;
+  }
+
+  &__additional-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 28px;
+  }
+
+  &__additional-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: $color-border;
+  }
+
+  &__additional-label {
+    color: $color-primary;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__additional-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px 16px;
+  }
+
+  // CTA
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 48px;
+  }
+
+  &__cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 24px;
+
+    border-radius: 8px;
+
+    background: $color-accent;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background: $color-primary-dark;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+// ================================
+// about card
+// ================================
+
+.about-card {
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    border-radius: 12px;
+
+    background: $color-primary-light;
+  }
+
+  &__image {
+    display: block;
+
+    width: 90%;
+    height: 90%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+    border-radius: 12px;
+  }
+
+  &__number {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: -10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 1);
+    color: $color-primary;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    border: 1px solid $color-primary;
+  }
+
+  &__title {
+    margin: 12px 0 0;
+
+    color: $color-text;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  &:hover {
+    .about-card__image {
+      transform: scale(1.03);
+    }
+  }
+}
+
+// ================================
+// Tablet
+// ================================
+
+@media (min-width: 768px) {
+  .about {
+    padding: 96px 0;
+
+    &__intro {
+      margin-bottom: 52px;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 24px;
+    }
+
+    &__additional {
+      margin-top: 80px;
+    }
+
+    &__additional-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 24px;
+    }
+
+    &__cta {
+      margin-top: 64px;
+    }
+
+    &__cta-button {
+      width: auto;
+      min-width: 280px;
+    }
+  }
+
+  .about-card {
+    &__image-wrapper {
+      aspect-ratio: 5 / 4;
+    }
+
+    &__title {
+      font-size: 19px;
+    }
+  }
+}

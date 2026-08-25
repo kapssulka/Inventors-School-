@@ -1,12 +1,15 @@
 @use "./../base/vars" as *;
 
 .program {
+  position: relative;
   padding: 72px 0;
 
   background: $color-bg;
 
   &__container {
     overflow: visible;
+    position: relative;
+    z-index: 1;
   }
 
   // Header

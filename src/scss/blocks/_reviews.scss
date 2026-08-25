@@ -1,11 +1,17 @@
 @use "./../base/vars" as *;
 
 .reviews {
+  position: relative;
   padding: 72px 0;
 
   overflow: hidden;
 
   background: $color-bg;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
 
   &__header {
     display: flex;
@@ -122,7 +128,9 @@
     display: flex;
     gap: 16px;
 
-    width: calc(100% + 16px);
+    border-radius: 12px 0 0 12px;
+
+    width: calc(100% + 20px);
 
     overflow-x: auto;
 
@@ -190,7 +198,7 @@
 
   border-radius: 12px;
 
-  background: #fff;
+  background: $color-primary-light;
 
   border: 1px solid rgba($color-primary, 0.12);
 

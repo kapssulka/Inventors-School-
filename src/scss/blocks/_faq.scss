@@ -1,0 +1,275 @@
+@use "./../base/vars" as *;
+
+.faq {
+  padding: 56px 0 72px;
+  background: $color-bg;
+
+  &__container {
+    width: 100%;
+  }
+
+  // Header
+
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 12px;
+    padding: 7px 11px;
+
+    border-radius: 6px;
+
+    background: $color-primary;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: $color-text;
+
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  // Accordion
+
+  &__accordion {
+    width: 100%;
+
+    border-top: 1px solid rgba($color-text, 0.1);
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba($color-text, 0.1);
+
+    &--open {
+      .faq__trigger {
+        color: $color-primary;
+      }
+
+      .faq__icon {
+        background: $color-accent;
+        border-color: $color-accent;
+
+        &::before {
+          background: #fff;
+        }
+
+        &::after {
+          background: #fff;
+          transform: translate(-50%, -50%) rotate(0deg) scaleX(0);
+        }
+      }
+
+      .faq__answer {
+        grid-template-rows: 1fr;
+        opacity: 1;
+      }
+
+      .faq__answer-inner {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba($color-primary, 0.15);
+    border-radius: 50%;
+
+    background: rgba($color-primary, 0.05);
+
+    transition:
+      background 0.3s ease,
+      border-color 0.3s ease;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 13px;
+      height: 2px;
+
+      border-radius: 2px;
+
+      background: $color-primary;
+
+      transform: translate(-50%, -50%);
+
+      transition:
+        background 0.25s ease,
+        transform 0.3s ease;
+    }
+
+    // Вертикальная линия плюса
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg) scaleX(1);
+    }
+  }
+
+  &__question {
+    margin: 0;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    border: 0;
+    background: transparent;
+
+    color: $color-text;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__question-text {
+    max-width: 600px;
+  }
+
+  // Animated plus / minus
+
+  &__button-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid rgba($color-accent, 0.2);
+    border-radius: 8px;
+    background: $color-primary;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &._block {
+      display: flex;
+      width: fit-content;
+      margin-top: 16px;
+    }
+  }
+
+  // Answer
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    opacity: 0;
+
+    transition:
+      grid-template-rows 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  &__answer-inner {
+    min-height: 0;
+    overflow: hidden;
+
+    padding-right: 58px;
+
+    color: rgba($color-text, 0.62);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    transition: padding-bottom 0.35s ease;
+
+    p {
+      margin: 0;
+    }
+
+    strong {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  // CTA
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+
+    text-align: center;
+  }
+
+  &__cta-title {
+    margin: 0;
+
+    color: $color-text;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__cta-text {
+    max-width: 420px;
+
+    margin: 8px 0 20px;
+
+    color: rgba($color-text, 0.58);
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__button {
+    min-height: 48px;
+    padding: 13px 22px;
+
+    font-size: 14px;
+  }
+}

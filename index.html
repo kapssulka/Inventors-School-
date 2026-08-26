@@ -7,6 +7,14 @@
     <title>Школа Изобретателей</title>
   </head>
   <body>
+    <div class="alert" role="alert">
+      <span class="alert__icon" aria-hidden="true">✓</span>
+
+      <p class="alert__text">
+        Спасибо! Мы получили Вашу заявку и скоро свяжемся с вами.
+      </p>
+    </div>
+
     <!-- ВАРИАНТ 1 -->
     <header class="header">
       <div class="container header__container">
@@ -605,6 +613,112 @@
           >
             Хочу также
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="trial" id="trial">
+      <div class="container trial__container">
+        <div class="trial__content">
+          <div class="trial__media">
+            <img
+              class="trial__image"
+              src="./public/images/trial-section/1.png"
+              alt="Ребёнок на пробном уроке"
+            />
+          </div>
+
+          <div class="trial__info">
+            <h2 class="trial__title">Записаться на пробный урок</h2>
+
+            <a class="trial__phone" href="tel:+996555027869">
+              +996 555 027 869
+            </a>
+
+            <a
+              class="trial__button cta-button"
+              href="https://wa.me/996555027869"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Записаться
+            </a>
+
+            <p class="trial__privacy">
+              Отправляя заявку, вы соглашаетесь с обработкой персональных
+              данных.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="trial" id="trial">
+      <div class="container trial__container">
+        <div class="trial__card">
+          <div class="trial__decor" aria-hidden="true"></div>
+
+          <div class="trial__content">
+            <div class="trial__content-wrapper">
+              <div class="trial__content-text">
+                <span class="trial__eyebrow"> Первый шаг </span>
+
+                <h2 class="trial__title">Запишитесь на пробный урок</h2>
+
+                <div class="trial__content-center">
+                  <div>
+                    <p class="trial__text">
+                      Познакомимся, покажем, как проходят занятия, и дадим
+                      ребёнку попробовать себя в роли изобретателя.
+                    </p>
+
+                    <!-- <a class="trial__phone" href="tel:+996555027869">
+                      +996 555 027 869
+                    </a> -->
+                  </div>
+
+                  <div class="trial__media">
+                    <img
+                      class="trial__image"
+                      src="./public/images/trial-section/1.png"
+                      alt="Ребёнок на занятии в школе изобретателей"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <img
+                class="trial__image-pc"
+                src="./public/images/trial-section/1.png"
+                alt="Ребёнок на занятии в школе изобретателей"
+              />
+            </div>
+
+            <form class="form-trial" action="#" method="POST">
+              <div class="form-trial__field">
+                <input
+                  class="form-trial__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="0 (700) 00-00-00"
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  aria-label="Номер телефона"
+                  required
+                />
+              </div>
+              <p class="form-trial__error">Введите корректный номер телефона</p>
+
+              <button class="form-trial__button cta-button" type="submit">
+                Записаться на пробный урок
+              </button>
+
+              <p class="form-trial__privacy">
+                Нажимая на кнопку, вы соглашаетесь с обработкой персональных
+                данных.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>

@@ -6,3 +6,7 @@ import "modern-css-reset";
 import "@fontsource-variable/manrope/wght.css";
 import "@fontsource/lora/400.css";
 import "@fontsource/lora/500.css";
+
+// js
+
+import "./js/phoneMask";

@@ -1,0 +1,153 @@
+@use "./../base/vars" as *;
+
+.branches {
+  padding: 72px 0;
+  background: $color-bg;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__eyebrow {
+    display: block;
+    margin-bottom: 10px;
+
+    color: $color-primary;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    max-width: 360px;
+    margin: 0;
+
+    color: $color-text;
+
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 600px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.branch-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  border: 1px solid rgba($color-primary, 0.1);
+  border-radius: 16px;
+
+  background: #fff;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+  }
+
+  &__number {
+    color: rgba($color-text, 0.35);
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: rgba($color-primary, 0.08);
+    color: $color-primary;
+  }
+
+  &__content {
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: rgba($color-text, 0.5);
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &__address {
+    margin: 0;
+
+    color: $color-text;
+
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.4;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 20px;
+
+    border-radius: 8px;
+
+    background: $color-primary;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}

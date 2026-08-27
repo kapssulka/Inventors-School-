@@ -885,8 +885,9 @@
 
     <section class="trial-idea" id="trial-idea">
       <div class="background">
-        <img src="./public/images/bg.webp" />
+        <img src="./public/images/bg.webp" alt="" aria-hidden="true" />
       </div>
+
       <div class="container trial-idea__container">
         <div class="trial-idea__card">
           <div class="trial-idea__media">
@@ -897,13 +898,15 @@
               src="./public/images/trial-v2/1.webp"
               alt="Ребёнок проводит эксперимент в школе изобретателей"
             />
+
+            <span class="trial-idea__eyebrow"> Первый шаг </span>
           </div>
 
           <div class="trial-idea__content">
-            <span class="trial-idea__eyebrow"> Первый шаг </span>
+            <div class="trial-idea__accent" aria-hidden="true"></div>
 
             <h2 class="trial-idea__title">
-              Хотите записаться
+              <span class="_block">Хотите</span> записаться
               <span>на пробный урок?</span>
             </h2>
 
@@ -916,6 +919,7 @@
             <a
               class="trial-idea__button cta-button"
               href="https://wa.me/message/BGDAUYP6QUFDJ1"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Хочу на пробный урок 🤗

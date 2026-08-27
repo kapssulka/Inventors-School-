@@ -130,7 +130,7 @@
 
     color: $color-text-secondary;
 
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4;
 
     &::before {
@@ -151,6 +151,36 @@
 
   &__cta-button {
     margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 24px;
+
+    border-radius: 8px;
+
+    border: 2px solid $color-accent;
+
+    background-color: #fff;
+
+    // color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    &._blue {
+      border: 2px solid $color-primary-dark;
+    }
   }
 
   // Второй, четвёртый и т.д.

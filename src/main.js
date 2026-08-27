@@ -9,6 +9,6 @@ import "@fontsource/lora/500.css";
 
 // js
 
-import "./js/phoneMask";
+// import "./js/phoneMask";
 import "./js/teachersSlider";
 import "./js/faqAccardion";

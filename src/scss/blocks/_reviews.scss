@@ -137,11 +137,6 @@
     padding-bottom: 8px;
 
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   // Hint
@@ -166,20 +161,6 @@
     color: $color-primary;
 
     font-size: 14px;
-  }
-
-  // CTA
-
-  &__action {
-    display: flex;
-    justify-content: center;
-
-    margin-top: 32px;
-  }
-
-  &__button {
-    width: auto;
-    min-width: 180px;
   }
 }
 

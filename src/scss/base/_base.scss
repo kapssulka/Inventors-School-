@@ -76,3 +76,30 @@ html {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+// scroll
+
+/* Global scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2f80ed $color-primary-light;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $color-primary-light;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #2f80ed;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #256dcc;
+}

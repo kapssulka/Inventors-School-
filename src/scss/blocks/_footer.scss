@@ -1,8 +1,271 @@
+// @use "./../base/vars" as *;
+
+// .footer {
+//   position: relative;
+
+//   overflow: hidden;
+
+//   padding: 64px 0 24px;
+
+//   background: $color-primary-dark;
+//   color: #fff;
+
+//   // Декоративные элементы
+//   &::before {
+//     content: "";
+
+//     position: absolute;
+
+//     top: -180px;
+//     right: -140px;
+
+//     width: 340px;
+//     height: 340px;
+
+//     border-radius: 50%;
+
+//     background: rgba($color-accent, 0.09);
+
+//     pointer-events: none;
+//   }
+
+//   &::after {
+//     content: "";
+
+//     position: absolute;
+
+//     bottom: 70px;
+//     left: -180px;
+
+//     width: 300px;
+//     height: 300px;
+
+//     border: 1px solid rgba(255, 255, 255, 0.05);
+//     border-radius: 50%;
+
+//     pointer-events: none;
+//   }
+
+//   &__container {
+//     position: relative;
+//     z-index: 1;
+
+//     width: 100%;
+//   }
+
+//   // -------------------------
+//   // Main
+//   // -------------------------
+
+//   &__main {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+
+//   &__logo {
+//     display: inline-flex;
+
+//     text-decoration: none;
+
+//     margin-bottom: 30px;
+//   }
+
+//   &__logo-image {
+//     display: block;
+
+//     width: 180px;
+//     height: auto;
+//   }
+
+//   // -------------------------
+//   // Groups
+//   // -------------------------
+
+//   &__group {
+//     margin-top: 40px;
+//   }
+
+//   &__label {
+//     display: flex;
+//     align-items: center;
+
+//     margin: 0 0 14px;
+
+//     color: $color-accent;
+
+//     font-size: 11px;
+//     font-weight: 700;
+//     line-height: 1.3;
+
+//     letter-spacing: 0.1em;
+//     text-transform: uppercase;
+
+//     &::before {
+//       content: "";
+
+//       width: 7px;
+//       height: 7px;
+
+//       margin-right: 9px;
+
+//       border-radius: 50%;
+
+//       background: $color-accent;
+
+//       box-shadow: 0 0 0 4px rgba($color-accent, 0.1);
+//     }
+//   }
+
+//   // -------------------------
+//   // Socials
+//   // -------------------------
+
+//   &__socials {
+//     display: flex;
+//     flex-wrap: wrap;
+
+//     gap: 8px;
+//   }
+
+//   &__social {
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     min-height: 44px;
+
+//     padding: 10px 17px;
+
+//     border: 1px solid rgba(255, 255, 255, 0.15);
+//     border-radius: 12px;
+
+//     background: rgba(255, 255, 255, 0.035);
+
+//     color: rgba(255, 255, 255, 0.9);
+
+//     font-size: 13px;
+//     font-weight: 600;
+
+//     text-decoration: none;
+
+//     backdrop-filter: blur(8px);
+
+//     transition:
+//       background-color 0.2s ease,
+//       border-color 0.2s ease,
+//       color 0.2s ease,
+//       transform 0.2s ease;
+
+//     &:hover {
+//       border-color: rgba($color-accent, 0.5);
+
+//       background: rgba($color-accent, 0.1);
+
+//       color: #fff;
+
+//       transform: translateY(-2px);
+//     }
+//   }
+
+//   // -------------------------
+//   // Contacts
+//   // -------------------------
+
+//   &__contacts {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   &__phone {
+//     display: inline-block;
+
+//     color: #fff;
+
+//     font-size: 25px;
+//     font-weight: 700;
+//     line-height: 1.25;
+
+//     letter-spacing: -0.02em;
+
+//     text-decoration: none;
+
+//     transition: color 0.2s ease;
+
+//     &:hover {
+//       color: $color-accent;
+//     }
+//   }
+
+//   &__whatsapp {
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 8px;
+
+//     margin-top: 10px;
+
+//     color: rgba(255, 255, 255, 0.58);
+
+//     font-size: 13px;
+//     font-weight: 500;
+//     line-height: 1.4;
+
+//     text-decoration: none;
+
+//     transition: color 0.2s ease;
+
+//     span {
+//       color: $color-accent;
+
+//       font-size: 17px;
+
+//       transition: transform 0.2s ease;
+//     }
+
+//     &:hover {
+//       color: #fff;
+
+//       span {
+//         transform: translate(2px, -2px);
+//       }
+//     }
+//   }
+
+//   // -------------------------
+//   // Bottom
+//   // -------------------------
+
+//   &__bottom {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4px;
+
+//     margin-top: 52px;
+//     padding-top: 20px;
+
+//     border-top: 1px solid rgba(255, 255, 255, 0.11);
+//   }
+
+//   &__copyright,
+//   &__legal,
+//   &__company {
+//     margin: 0;
+
+//     color: rgba(255, 255, 255, 0.4);
+
+//     font-size: 10px;
+//     line-height: 1.5;
+//   }
+
+//   &__copyright {
+//     color: rgba(255, 255, 255, 0.58);
+//   }
+// }
+
 @use "./../base/vars" as *;
 
 .footer {
   position: relative;
-
   overflow: hidden;
 
   padding: 64px 0 24px;
@@ -10,12 +273,14 @@
   background: $color-primary-dark;
   color: #fff;
 
-  // Декоративные элементы
+  // -------------------------
+  // Decoration
+  // -------------------------
+
   &::before {
     content: "";
 
     position: absolute;
-
     top: -180px;
     right: -140px;
 
@@ -33,7 +298,6 @@
     content: "";
 
     position: absolute;
-
     bottom: 70px;
     left: -180px;
 
@@ -62,96 +326,34 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
   &__logo {
     display: inline-flex;
 
-    text-decoration: none;
-
     margin-bottom: 30px;
+
+    text-decoration: none;
   }
 
   &__logo-image {
     display: block;
 
-    width: 180px;
+    width: 165px;
     height: auto;
   }
 
-  // -------------------------
-  // Quote
-  // -------------------------
-
-  &__quote {
-    position: relative;
-
-    max-width: 390px;
-
-    margin: 28px 0 0;
-    padding-left: 20px;
-
-    color: rgba(255, 255, 255, 0.82);
-
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.5;
-
-    letter-spacing: -0.015em;
-
-    &::before {
-      content: "“";
-
-      position: absolute;
-
-      top: -8px;
-      left: 0;
-
-      color: $color-accent;
-
-      font-family: Georgia, serif;
-      font-size: 34px;
-      font-weight: 700;
-      line-height: 1;
-    }
-  }
-
-  // -------------------------
-  // Groups
-  // -------------------------
-
   &__group {
-    margin-top: 40px;
+    margin-top: 28px;
   }
 
   &__label {
-    display: flex;
-    align-items: center;
+    margin: 0 0 11px;
 
-    margin: 0 0 14px;
-
-    color: $color-accent;
-
-    font-size: 11px;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.3;
-
     letter-spacing: 0.1em;
     text-transform: uppercase;
-
-    &::before {
-      content: "";
-
-      width: 7px;
-      height: 7px;
-
-      margin-right: 9px;
-
-      border-radius: 50%;
-
-      background: $color-accent;
-
-      box-shadow: 0 0 0 4px rgba($color-accent, 0.1);
-    }
   }
 
   // -------------------------
@@ -160,33 +362,26 @@
 
   &__socials {
     display: flex;
-    flex-wrap: wrap;
-
-    gap: 8px;
+    align-items: center;
+    gap: 9px;
   }
 
   &__social {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    min-height: 44px;
+    width: 42px;
+    height: 42px;
 
-    padding: 10px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
 
-    background: rgba(255, 255, 255, 0.035);
-
-    color: rgba(255, 255, 255, 0.9);
-
-    font-size: 13px;
-    font-weight: 600;
+    color: rgba(255, 255, 255, 0.82);
 
     text-decoration: none;
-
-    backdrop-filter: blur(8px);
 
     transition:
       background-color 0.2s ease,
@@ -194,12 +389,19 @@
       color 0.2s ease,
       transform 0.2s ease;
 
+    svg {
+      width: 18px;
+      height: 18px;
+
+      fill: currentColor;
+    }
+
     &:hover {
       border-color: rgba($color-accent, 0.5);
 
-      background: rgba($color-accent, 0.1);
+      background: rgba($color-accent, 0.12);
 
-      color: #fff;
+      color: $color-accent;
 
       transform: translateY(-2px);
     }
@@ -212,18 +414,16 @@
   &__contacts {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   &__phone {
-    display: inline-block;
-
     color: #fff;
 
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.25;
-
-    letter-spacing: -0.02em;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
 
     text-decoration: none;
 
@@ -237,13 +437,13 @@
   &__whatsapp {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
 
-    margin-top: 10px;
+    margin-top: 8px;
 
-    color: rgba(255, 255, 255, 0.58);
+    color: rgba(255, 255, 255, 0.55);
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.4;
 
@@ -251,44 +451,45 @@
 
     transition: color 0.2s ease;
 
-    span {
-      color: $color-accent;
+    svg {
+      width: 15px;
+      height: 15px;
 
-      font-size: 17px;
-
-      transition: transform 0.2s ease;
+      fill: currentColor;
     }
 
     &:hover {
-      color: #fff;
-
-      span {
-        transform: translate(2px, -2px);
-      }
+      color: $color-accent;
     }
   }
 
   // -------------------------
-  // Bottom
+  // Bottom / Legal
   // -------------------------
 
   &__bottom {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
+    gap: 14px;
 
-    margin-top: 52px;
-    padding-top: 20px;
+    margin-top: 44px;
+    padding-top: 18px;
 
     border-top: 1px solid rgba(255, 255, 255, 0.11);
   }
 
+  &__legal-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
   &__copyright,
   &__legal,
-  &__company {
+  &__company-name,
+  &__company-inn {
     margin: 0;
-
-    color: rgba(255, 255, 255, 0.4);
 
     font-size: 10px;
     line-height: 1.5;
@@ -296,5 +497,26 @@
 
   &__copyright {
     color: rgba(255, 255, 255, 0.58);
+  }
+
+  &__legal {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  &__company {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+
+    text-align: left;
+  }
+
+  &__company-name {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  &__company-inn {
+    color: rgba(255, 255, 255, 0.28);
   }
 }

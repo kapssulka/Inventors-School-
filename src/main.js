@@ -12,3 +12,4 @@ import "@fontsource/lora/500.css";
 // import "./js/phoneMask";
 import "./js/teachersSlider";
 import "./js/faqAccardion";
+import "./js/map";

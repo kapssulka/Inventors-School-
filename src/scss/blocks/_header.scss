@@ -221,3 +221,182 @@
     }
   }
 }
+
+// ----------------------
+// heder 2v
+
+// ================================
+// Header 2
+// ================================
+
+.wrapper-v2 {
+  position: relative;
+}
+
+.header-2 {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+
+  // -------------------------
+  // Full-width glass
+  // -------------------------
+
+  background: rgba(20, 35, 50, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  // -------------------------
+  // Container
+  // -------------------------
+
+  &__container {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  // -------------------------
+  // Info
+  // -------------------------
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    width: 100%;
+  }
+
+  // -------------------------
+  // Common links
+  // -------------------------
+
+  &__phone,
+  &__location,
+  &__whatsapp {
+    color: inherit;
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  // -------------------------
+  // Phone
+  // -------------------------
+
+  &__phone {
+    flex: 0 0 auto;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  // -------------------------
+  // Location
+  // -------------------------
+
+  &__location {
+    position: relative;
+    flex: 0 0 auto;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 1px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%);
+      content: "";
+    }
+
+    &::before {
+      left: -10px;
+    }
+
+    &::after {
+      right: -10px;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  // -------------------------
+  // WhatsApp
+  // -------------------------
+
+  &__whatsapp {
+    display: inline-flex;
+    flex: 0 1 auto;
+    align-items: center;
+    gap: 6px;
+
+    min-width: 0;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__whatsapp-icon {
+    flex: 0 0 auto;
+
+    width: 15px;
+    height: 15px;
+
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+// ================================
+// Small screens
+// ================================
+
+@media (max-width: 400px) {
+  .header-2 {
+    &__container {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    &__info {
+      gap: 7px 16px;
+    }
+
+    &__phone {
+      font-size: 12px;
+    }
+
+    &__location,
+    &__whatsapp {
+      font-size: 11px;
+    }
+  }
+}

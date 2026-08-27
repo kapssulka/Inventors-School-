@@ -75,14 +75,15 @@
   overflow: hidden;
   border-radius: 20px;
 
-  // Swiper
   .swiper-wrapper {
     display: flex;
+    align-items: stretch;
   }
 
   .swiper-slide {
     flex-shrink: 0;
     width: 100%;
+    height: auto;
   }
 }
 

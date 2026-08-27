@@ -1,10 +1,13 @@
 @use "./../base/vars" as *;
 
 .branches {
+  position: relative;
   padding: 40px 0;
   background: $color-bg;
 
   &__container {
+    position: relative;
+    z-index: 1;
     width: 100%;
   }
 

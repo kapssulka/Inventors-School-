@@ -42,6 +42,12 @@
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: -0.03em;
+
+    @media (max-width: 600px) {
+      span {
+        display: block;
+      }
+    }
   }
 
   // Items
@@ -49,7 +55,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    // gap: 32px;
   }
 }
 
@@ -58,6 +64,18 @@
 // ========================================
 
 .program-item {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  background: $color-bg;
+
+  &:nth-child(odd) {
+    background: $color-primary-light;
+
+    .program-item__media {
+      border: 1px solid $color-border;
+    }
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -67,7 +85,7 @@
 
   &__media {
     width: calc(100% + 20px);
-    margin-left: -20px;
+    margin-left: -24px;
 
     overflow: hidden;
 

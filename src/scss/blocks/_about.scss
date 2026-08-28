@@ -2,7 +2,7 @@
 
 .about {
   position: relative;
-  padding: 72px 0 40px;
+  padding: 60px 0 40px;
 
   background: $color-bg;
 
@@ -98,14 +98,6 @@
     transition:
       background-color 0.2s ease,
       transform 0.2s ease;
-
-    &:hover {
-      background: $color-primary-dark;
-    }
-
-    &:active {
-      transform: translateY(1px);
-    }
   }
 }
 

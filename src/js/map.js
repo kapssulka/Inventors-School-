@@ -32,10 +32,14 @@ if (mapElement) {
   const map = L.map(mapElement, {
     zoomControl: true,
     scrollWheelZoom: false,
+    attributionControl: true,
   });
 
+  map.attributionControl.setPrefix(false);
+
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
   }).addTo(map);
 
   const branchIcon = L.divIcon({

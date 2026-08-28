@@ -1,8 +1,423 @@
 @use "./../base/vars" as *;
 
-// ================================
-// Hero
-// ================================
+// // ================================
+// // Hero
+// // ================================
+
+// .hero {
+//   position: relative;
+//   display: flex;
+//   align-items: stretch;
+//   min-height: 100svh;
+//   overflow: hidden;
+//   color: #fff;
+
+//   // -------------------------
+//   // Video
+//   // -------------------------
+
+//   &__video {
+//     position: absolute;
+//     z-index: 0;
+//     inset: 0;
+
+//     width: 100%;
+//     height: 100%;
+
+//     object-fit: cover;
+//   }
+
+//   &__overlay {
+//     position: absolute;
+//     z-index: 1;
+//     inset: 0;
+
+//     background: linear-gradient(
+//       180deg,
+//       rgba(0, 0, 0, 0.38) 0%,
+//       rgba(0, 0, 0, 0.12) 42%,
+//       rgba(0, 0, 0, 0.5) 100%
+//     );
+//   }
+
+//   // -------------------------
+//   // Container
+//   // -------------------------
+
+//   &__container {
+//     position: relative;
+//     z-index: 2;
+
+//     display: flex;
+//     align-items: flex-start;
+
+//     width: 100%;
+//     min-height: 100svh;
+
+//     padding-top: 110px;
+//     padding-bottom: 105px;
+//   }
+
+//   // -------------------------
+//   // Content
+//   // -------------------------
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+
+//     width: 100%;
+//     max-width: 760px;
+
+//     min-height: calc(100svh - 225px);
+
+//     padding-top: 5vh;
+//   }
+
+//   // -------------------------
+//   // Topics
+//   // -------------------------
+
+//   &__topics {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     gap: 7px;
+
+//     margin-bottom: 18px;
+//   }
+
+//   &__topic {
+//     display: inline-flex;
+//     align-items: center;
+
+//     min-height: 30px;
+//     padding: 6px 11px;
+
+//     border-radius: 7px;
+
+//     background: rgba(255, 255, 255, 0.92);
+//     color: $color-text;
+
+//     font-size: 12px;
+//     font-weight: 700;
+//     line-height: 1.2;
+
+//     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+//     backdrop-filter: blur(8px);
+//   }
+
+//   &__divider {
+//     display: none;
+//   }
+
+//   // -------------------------
+//   // Title
+//   // -------------------------
+
+//   &__title {
+//     width: fit-content;
+//     max-width: 650px;
+
+//     margin: 0;
+//     // padding: 8px 13px 10px;
+//     padding: 12px 17px 14px;
+
+//     border-radius: 12px;
+
+//     background: rgba(255, 255, 255, 0.09);
+
+//     color: #fff;
+
+//     font-size: clamp(42px, 12vw, 64px);
+//     font-weight: 700;
+//     line-height: 1.02;
+//     letter-spacing: -0.04em;
+
+//     box-shadow:
+//       inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+//       0 8px 30px rgba(0, 0, 0, 0.08);
+
+//     backdrop-filter: blur(5px);
+//   }
+
+//   // -------------------------
+//   // Age
+//   // -------------------------
+
+//   &__age {
+//     display: inline-flex;
+//     align-items: center;
+//     align-self: flex-start;
+
+//     margin: 18px 0 0;
+//     padding: 7px 12px;
+
+//     border: 1px solid rgba(255, 255, 255, 0.2);
+//     border-radius: 8px;
+
+//     background: rgba(255, 255, 255, 0.1);
+//     color: rgba(255, 255, 255, 0.92);
+
+//     font-size: 13px;
+//     font-weight: 600;
+//     line-height: 1.3;
+
+//     backdrop-filter: blur(8px);
+
+//     &::before {
+//       content: "";
+
+//       width: 6px;
+//       height: 6px;
+
+//       margin-right: 8px;
+
+//       border-radius: 50%;
+//       background: $color-accent;
+//       box-shadow: 0 0 0 4px rgba($color-accent, 0.12);
+//     }
+//   }
+
+//   // -------------------------
+//   // Actions
+//   // -------------------------
+
+//   &__actions {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: stretch;
+//     gap: 9px;
+
+//     margin-top: auto;
+//     padding-top: 8vh;
+//   }
+
+//   &__actions-text {
+//     order: 2;
+
+//     text-align: center;
+
+//     color: rgba(255, 255, 255, 0.72);
+
+//     font-size: 12px;
+//     font-weight: 500;
+//     line-height: 1;
+//   }
+
+//   &__button {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     min-height: 50px;
+//     padding: 14px 24px;
+
+//     border-radius: 8px;
+
+//     font-size: 14px;
+//     font-weight: 700;
+//     line-height: 1;
+
+//     text-decoration: none;
+
+//     transition:
+//       background-color 0.2s ease,
+//       color 0.2s ease,
+//       border-color 0.2s ease,
+//       transform 0.2s ease;
+
+//     &:active {
+//       transform: translateY(1px);
+//     }
+
+//     &--primary {
+//       order: 1;
+
+//       background: $color-accent;
+//       color: #fff;
+
+//       box-shadow: 0 8px 24px rgba($color-accent, 0.22);
+
+//       &:hover {
+//         background: $color-accent-hover;
+//       }
+//     }
+
+//     &--secondary {
+//       order: 3;
+
+//       border: 1px solid rgba(255, 255, 255, 0.65);
+//       background: rgba(255, 255, 255, 0.08);
+//       color: #fff;
+
+//       backdrop-filter: blur(8px);
+
+//       &:hover {
+//         border-color: #fff;
+//         background: rgba(255, 255, 255, 0.16);
+//       }
+//     }
+//   }
+
+//   // -------------------------
+//   // Scroll
+//   // -------------------------
+
+//   &__scroll {
+//     position: absolute;
+//     z-index: 3;
+
+//     bottom: 22px;
+//     left: 50%;
+
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     color: rgba(255, 255, 255, 0.78);
+//     text-decoration: none;
+
+//     transform: translateX(-50%);
+
+//     transition: color 0.2s ease;
+
+//     &:hover {
+//       color: #fff;
+//     }
+//   }
+
+//   &__scroll-icon {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     width: 20px;
+//     height: 28px;
+
+//     animation: scroll-down 1.5s ease-in-out infinite;
+//   }
+
+//   &__scroll-arrow {
+//     width: 12px;
+//     height: 12px;
+
+//     border-right: 1.5px solid currentColor;
+//     border-bottom: 1.5px solid currentColor;
+
+//     transform: rotate(45deg);
+
+//     &:nth-child(2) {
+//       margin-top: -3px;
+//       opacity: 0.4;
+//     }
+//   }
+// }
+
+// // ================================
+// // Animation
+// // ================================
+
+// @keyframes scroll-down {
+//   0%,
+//   100% {
+//     transform: translateY(-3px);
+//   }
+
+//   50% {
+//     transform: translateY(5px);
+//   }
+// }
+
+// // ================================
+// // Tablet / Desktop
+// // ================================
+
+// @media (min-width: 768px) {
+//   .container {
+//     padding-right: 32px;
+//     padding-left: 32px;
+//   }
+
+//   .hero {
+//     &__container {
+//       padding-top: 130px;
+//       padding-bottom: 95px;
+//     }
+
+//     &__content {
+//       max-width: 760px;
+//       padding-top: 5vh;
+
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//     }
+
+//     &__topics {
+//       gap: 8px;
+//       margin-bottom: 20px;
+//     }
+
+//     &__topic {
+//       min-height: 32px;
+//       padding: 7px 12px;
+
+//       font-size: 13px;
+//     }
+
+//     &__title {
+//       padding: 9px 16px 12px;
+
+//       font-size: clamp(52px, 7vw, 76px);
+//     }
+
+//     &__age {
+//       margin-top: 20px;
+//       font-size: 14px;
+//     }
+
+//     &__actions {
+//       flex-direction: row;
+//       align-items: center;
+
+//       gap: 10px;
+
+//       padding-top: 7vh;
+//     }
+
+//     &__actions-text {
+//       order: 2;
+
+//       flex: 0 0 auto;
+
+//       padding: 0 2px;
+
+//       font-size: 12px;
+//     }
+
+//     &__button {
+//       min-width: 165px;
+//     }
+
+//     &__button--primary {
+//       order: 1;
+//     }
+
+//     &__button--secondary {
+//       order: 3;
+//     }
+//   }
+// }
+
+// ---------------------
+// ! hero 2
+
+.wrapper {
+  position: relative;
+}
 
 .hero {
   position: relative;
@@ -11,6 +426,21 @@
   min-height: 100svh;
   overflow: hidden;
   color: #fff;
+
+  &.v2 {
+    .hero__title {
+      // Оранжевое стекло
+      background: rgba(242, 140, 40, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero__button--primary {
+      background: $color-primary;
+    }
+  }
 
   // -------------------------
   // Video
@@ -54,8 +484,10 @@
     width: 100%;
     min-height: 100svh;
 
-    padding-top: 110px;
-    padding-bottom: 105px;
+    // padding-top: 110px;
+    // padding-bottom: 105px;
+    padding-top: 70px;
+    padding-bottom: 65px;
   }
 
   // -------------------------
@@ -69,48 +501,20 @@
 
     width: 100%;
     max-width: 760px;
+    // min-height: calc(100svh - 215px);
+    min-height: 100%;
 
-    min-height: calc(100svh - 225px);
-
-    padding-top: 5vh;
+    // padding-top: 5vh;
   }
 
   // -------------------------
-  // Topics
+  // Top
   // -------------------------
 
-  &__topics {
+  &__top {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    gap: 7px;
-
-    margin-bottom: 18px;
-  }
-
-  &__topic {
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 30px;
-    padding: 6px 11px;
-
-    border-radius: 7px;
-
-    background: rgba(255, 255, 255, 0.92);
-    color: $color-text;
-
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.2;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
-    backdrop-filter: blur(8px);
-  }
-
-  &__divider {
-    display: none;
   }
 
   // -------------------------
@@ -118,66 +522,152 @@
   // -------------------------
 
   &__title {
-    width: fit-content;
-    max-width: 650px;
+    // width: fit-content;
+    width: 100%;
 
     margin: 0;
-    // padding: 8px 13px 10px;
-    padding: 12px 17px 14px;
+
+    padding: 18px 24px 20px;
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.09);
+    white-space: nowrap;
+
+    // Оранжевое стекло
+    // background: rgba(242, 140, 40, 0.72);
+    // border: 1px solid rgba(255, 255, 255, 0.28);
+    // box-shadow:
+    //   inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    //   0 8px 30px rgba(0, 0, 0, 0.08);
 
     color: #fff;
 
-    font-size: clamp(42px, 12vw, 64px);
+    font-size: clamp(42px, 9vw, 64px);
     font-weight: 700;
     line-height: 1.02;
     letter-spacing: -0.04em;
 
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-      0 8px 30px rgba(0, 0, 0, 0.08);
-
     backdrop-filter: blur(5px);
+
+    margin-bottom: 10px;
+
+    //? Вариант синим стеклом:
+    background: rgba(37, 99, 166, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 8px 30px rgba(0, 0, 0, 0.14);
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
-  // -------------------------
+  // ================================
+  // Info
+  // ================================
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+    background: #fff;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  // ================================
+  // Topics
+  // ================================
+
+  &__topics {
+    display: flex;
+    align-items: center;
+
+    min-height: 38px;
+    padding: 0 6px;
+  }
+
+  &__topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 30px;
+    padding: 0 10px;
+
+    color: $color-text;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    &:not(:first-child) {
+      position: relative;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        width: 1px;
+        height: 12px;
+
+        background: $color-border;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  // ================================
   // Age
-  // -------------------------
+  // ================================
 
   &__age {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    align-self: flex-start;
+    justify-content: center;
+    gap: 5px;
 
-    margin: 18px 0 0;
-    padding: 7px 12px;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    border-top: 1px solid $color-border;
 
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.92);
+    color: $color-text-secondary;
 
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
 
-    backdrop-filter: blur(8px);
+    span {
+      color: $color-text-secondary;
+    }
+
+    strong {
+      color: $color-text;
+      font-weight: 700;
+    }
 
     &::before {
       content: "";
 
-      width: 6px;
-      height: 6px;
-
-      margin-right: 8px;
+      width: 5px;
+      height: 5px;
+      flex: 0 0 5px;
 
       border-radius: 50%;
       background: $color-accent;
-      box-shadow: 0 0 0 4px rgba($color-accent, 0.12);
     }
   }
 
@@ -189,6 +679,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
     gap: 9px;
 
     margin-top: auto;
@@ -213,6 +704,7 @@
     justify-content: center;
 
     min-height: 50px;
+
     padding: 14px 24px;
 
     border-radius: 8px;
@@ -250,7 +742,9 @@
       order: 3;
 
       border: 1px solid rgba(255, 255, 255, 0.65);
+
       background: rgba(255, 255, 255, 0.08);
+
       color: #fff;
 
       backdrop-filter: blur(8px);
@@ -278,6 +772,7 @@
     align-items: center;
 
     color: rgba(255, 255, 255, 0.78);
+
     text-decoration: none;
 
     transform: translateX(-50%);
@@ -297,7 +792,7 @@
     width: 20px;
     height: 28px;
 
-    animation: scroll-down 1.5s ease-in-out infinite;
+    animation: hero-scroll-down 1.5s ease-in-out infinite;
   }
 
   &__scroll-arrow {
@@ -316,11 +811,11 @@
   }
 }
 
-// ================================
+// -------------------------
 // Animation
-// ================================
+// -------------------------
 
-@keyframes scroll-down {
+@keyframes hero-scroll-down {
   0%,
   100% {
     transform: translateY(-3px);
@@ -331,16 +826,11 @@
   }
 }
 
-// ================================
+// -------------------------
 // Tablet / Desktop
-// ================================
+// -------------------------
 
 @media (min-width: 768px) {
-  .container {
-    padding-right: 32px;
-    padding-left: 32px;
-  }
-
   .hero {
     &__container {
       padding-top: 130px;
@@ -350,33 +840,29 @@
     &__content {
       max-width: 760px;
       padding-top: 5vh;
+    }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    &__title {
+      font-size: clamp(52px, 7vw, 76px);
     }
 
     &__topics {
       gap: 8px;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     &__topic {
       min-height: 32px;
+
       padding: 7px 12px;
 
       font-size: 13px;
     }
 
-    &__title {
-      padding: 9px 16px 12px;
-
-      font-size: clamp(52px, 7vw, 76px);
-    }
-
     &__age {
-      margin-top: 20px;
-      font-size: 14px;
+      margin-top: 13px;
+
+      font-size: 13px;
     }
 
     &__actions {
@@ -389,8 +875,6 @@
     }
 
     &__actions-text {
-      order: 2;
-
       flex: 0 0 auto;
 
       padding: 0 2px;
@@ -401,31 +885,30 @@
     &__button {
       min-width: 165px;
     }
-
-    &__button--primary {
-      order: 1;
-    }
-
-    &__button--secondary {
-      order: 3;
-    }
   }
 }
 
-// ---------------------
-// ! hero 2
+//! V2
+
+// ========================================
+// Hero V2
+// ========================================
 
 .hero-2 {
   position: relative;
+
   display: flex;
   align-items: stretch;
+
   min-height: 100svh;
+
   overflow: hidden;
+
   color: #fff;
 
-  // -------------------------
+  // ----------------------------------------
   // Video
-  // -------------------------
+  // ----------------------------------------
 
   &__video {
     position: absolute;
@@ -451,9 +934,9 @@
     );
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Container
-  // -------------------------
+  // ----------------------------------------
 
   &__container {
     position: relative;
@@ -465,13 +948,13 @@
     width: 100%;
     min-height: 100svh;
 
-    padding-top: 110px;
-    padding-bottom: 105px;
+    padding-top: 70px;
+    padding-bottom: 65px;
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Content
-  // -------------------------
+  // ----------------------------------------
 
   &__content {
     display: flex;
@@ -480,14 +963,13 @@
 
     width: 100%;
     max-width: 760px;
-    min-height: calc(100svh - 215px);
 
-    // padding-top: 5vh;
+    min-height: 100%;
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Top
-  // -------------------------
+  // ----------------------------------------
 
   &__top {
     display: flex;
@@ -495,105 +977,136 @@
     align-items: flex-start;
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Title
-  // -------------------------
+  // ----------------------------------------
 
   &__title {
-    width: fit-content;
-    max-width: 680px;
+    width: 100%;
 
-    margin: 0;
-
-    padding: 12px 17px 14px;
+    margin: 0 0 10px;
+    padding: 18px 24px 20px;
 
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
-    background: rgba(255, 255, 255, 0.09);
+    background: rgba(37, 99, 166, 0.72);
 
     color: #fff;
 
-    font-size: clamp(42px, 12vw, 64px);
+    font-size: clamp(42px, 9vw, 64px);
     font-weight: 700;
     line-height: 1.02;
     letter-spacing: -0.04em;
 
+    white-space: nowrap;
+
     box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-      0 8px 30px rgba(0, 0, 0, 0.08);
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 8px 30px rgba(0, 0, 0, 0.14);
 
     backdrop-filter: blur(5px);
   }
 
-  // -------------------------
+  // ----------------------------------------
+  // Info
+  // ----------------------------------------
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  // ----------------------------------------
   // Topics
-  // -------------------------
+  // ----------------------------------------
 
   &__topics {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 
-    gap: 7px;
+    min-height: 38px;
 
-    margin-top: 18px;
+    padding: 0 6px;
   }
 
   &__topic {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
     min-height: 30px;
 
-    padding: 6px 11px;
-
-    border-radius: 7px;
-
-    background: rgba(255, 255, 255, 0.92);
+    padding: 0 10px;
 
     color: $color-text;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
 
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
 
-    backdrop-filter: blur(8px);
+    &:not(:first-child) {
+      position: relative;
+
+      &::before {
+        position: absolute;
+
+        top: 50%;
+        left: 0;
+
+        width: 1px;
+        height: 12px;
+
+        background: $color-border;
+
+        transform: translateY(-50%);
+
+        content: "";
+      }
+    }
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Age
-  // -------------------------
+  // ----------------------------------------
 
   &__age {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
     gap: 5px;
 
-    margin: 12px 0 0;
-    padding: 7px 12px;
+    min-height: 30px;
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 8px;
+    margin: 0;
+    padding: 0 12px;
 
-    background: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid $color-border;
 
-    color: rgba(255, 255, 255, 0.78);
+    color: $color-text-secondary;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    line-height: 1.3;
-
-    backdrop-filter: blur(8px);
+    line-height: 1;
 
     span {
-      opacity: 0.7;
+      color: $color-text-secondary;
     }
 
     strong {
-      color: #fff;
+      color: $color-text;
       font-weight: 700;
     }
 
@@ -602,19 +1115,17 @@
 
       width: 5px;
       height: 5px;
-
-      margin-right: 2px;
+      flex: 0 0 5px;
 
       border-radius: 50%;
 
       background: $color-accent;
-      box-shadow: 0 0 0 4px rgba($color-accent, 0.1);
     }
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Actions
-  // -------------------------
+  // ----------------------------------------
 
   &__actions {
     display: flex;
@@ -630,13 +1141,13 @@
   &__actions-text {
     order: 2;
 
-    text-align: center;
-
     color: rgba(255, 255, 255, 0.72);
 
     font-size: 12px;
     font-weight: 500;
     line-height: 1;
+
+    text-align: center;
   }
 
   &__button {
@@ -697,9 +1208,9 @@
     }
   }
 
-  // -------------------------
+  // ----------------------------------------
   // Scroll
-  // -------------------------
+  // ----------------------------------------
 
   &__scroll {
     position: absolute;
@@ -752,9 +1263,9 @@
   }
 }
 
-// -------------------------
+// ========================================
 // Animation
-// -------------------------
+// ========================================
 
 @keyframes hero-2-scroll-down {
   0%,
@@ -767,9 +1278,9 @@
   }
 }
 
-// -------------------------
+// ========================================
 // Tablet / Desktop
-// -------------------------
+// ========================================
 
 @media (min-width: 768px) {
   .hero-2 {
@@ -784,8 +1295,6 @@
     }
 
     &__title {
-      padding: 9px 16px 12px;
-
       font-size: clamp(52px, 7vw, 76px);
     }
 
@@ -796,7 +1305,6 @@
 
     &__topic {
       min-height: 32px;
-
       padding: 7px 12px;
 
       font-size: 13px;
@@ -804,7 +1312,6 @@
 
     &__age {
       margin-top: 13px;
-
       font-size: 13px;
     }
 

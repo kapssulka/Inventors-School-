@@ -34,8 +34,9 @@
 */
 
 //? КОД
-const COUNTER_ID_signup = 603019871;
-const COUNTER_ID_pogram = 603022739;
+// const COUNTER_ID_signup = 603019871;
+// const COUNTER_ID_pogram = 603022739;
+const COUNTER_ID = 112032088;
 
 // Кнопки «Записаться»
 const signupButtons = document.querySelectorAll('[data-metric="cta_signup"]');
@@ -43,7 +44,7 @@ const signupButtons = document.querySelectorAll('[data-metric="cta_signup"]');
 if (signupButtons.length > 0) {
   signupButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      ym(COUNTER_ID_signup, "reachGoal", "cta_signup", {
+      ym(COUNTER_ID, "reachGoal", "cta_signup", {
         section: button.dataset.section,
       });
 
@@ -58,7 +59,7 @@ const programButtons = document.querySelectorAll('[data-metric="cta_program"]');
 if (programButtons.length > 0) {
   programButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      ym(COUNTER_ID_pogram, "reachGoal", "cta_program", {
+      ym(COUNTER_ID, "reachGoal", "cta_program", {
         section: button.dataset.section,
         program: button.dataset.program,
       });

@@ -13,3 +13,4 @@ import "@fontsource/lora/500.css";
 import "./js/teachersSlider";
 import "./js/faqAccardion";
 import "./js/map";
+import "./js/metrix";

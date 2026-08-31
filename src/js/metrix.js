@@ -34,29 +34,26 @@
 */
 
 //? КОД
-// const COUNTER_ID_signup = 603019871;
-// const COUNTER_ID_pogram = 603022739;
-const COUNTER_ID = 112032088;
+
+const COUNTER_ID = 112032088; // - Я.Метрика
 
 // Кнопки «Записаться»
 const signupButtons = document.querySelectorAll('[data-metric="cta_signup"]');
 
 if (signupButtons.length > 0) {
   signupButtons.forEach((button) => {
-    console.log(button);
-
-    const test = {
-      section: button.dataset.section,
-
-      ...(button.dataset.teacher && {
-        teacher: button.dataset.teacher,
-      }),
-    };
-
-    console.log(test);
-
     button.addEventListener("click", () => {
+      //? Я.Метрика
       ym(COUNTER_ID, "reachGoal", "cta_signup", {
+        section: button.dataset.section,
+
+        ...(button.dataset.teacher && {
+          teacher: button.dataset.teacher,
+        }),
+      });
+
+      //? Google Analytics
+      gtag("event", "cta_signup", {
         section: button.dataset.section,
 
         ...(button.dataset.teacher && {
@@ -75,7 +72,14 @@ const programButtons = document.querySelectorAll('[data-metric="cta_program"]');
 if (programButtons.length > 0) {
   programButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      //? Я.Метрика
       ym(COUNTER_ID, "reachGoal", "cta_program", {
+        section: button.dataset.section,
+        program: button.dataset.program,
+      });
+
+      //? Google Analytics
+      gtag("event", "cta_program", {
         section: button.dataset.section,
         program: button.dataset.program,
       });
@@ -91,7 +95,13 @@ const phoneButtons = document.querySelectorAll('[data-metric="phone_click"]');
 if (phoneButtons.length > 0) {
   phoneButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      //? Я.Метрика
       ym(COUNTER_ID, "reachGoal", "phone_click", {
+        section: button.dataset.section,
+      });
+
+      //? Google Analytics
+      gtag("event", "phone_click", {
         section: button.dataset.section,
       });
 
@@ -108,8 +118,18 @@ const whatsappButtons = document.querySelectorAll(
 if (whatsappButtons.length > 0) {
   whatsappButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      //? Я.Метрика
       ym(COUNTER_ID, "reachGoal", "whatsapp_click", {
         section: button.dataset.section,
+        ...(button.dataset.placement && {
+          placement: button.dataset.placement,
+        }),
+      });
+
+      //? Google Analytics
+      gtag("event", "whatsapp_click", {
+        section: button.dataset.section,
+
         ...(button.dataset.placement && {
           placement: button.dataset.placement,
         }),

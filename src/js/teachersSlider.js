@@ -57,10 +57,15 @@ if (teachersSlider) {
     }
 
     const teacherName = currentSlide.dataset.teacherName;
+    const teacher = currentSlide.dataset.teacher;
     const whatsappMessage = currentSlide.dataset.whatsappMessage;
 
     if (teacherName) {
       cta.textContent = `Записаться к ${teacherName}`;
+    }
+
+    if (teacher) {
+      cta.dataset.teacher = teacher;
     }
 
     if (whatsappMessage) {

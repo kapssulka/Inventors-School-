@@ -43,9 +43,25 @@ const signupButtons = document.querySelectorAll('[data-metric="cta_signup"]');
 
 if (signupButtons.length > 0) {
   signupButtons.forEach((button) => {
+    console.log(button);
+
+    const test = {
+      section: button.dataset.section,
+
+      ...(button.dataset.teacher && {
+        teacher: button.dataset.teacher,
+      }),
+    };
+
+    console.log(test);
+
     button.addEventListener("click", () => {
       ym(COUNTER_ID, "reachGoal", "cta_signup", {
         section: button.dataset.section,
+
+        ...(button.dataset.teacher && {
+          teacher: button.dataset.teacher,
+        }),
       });
 
       console.log("Цель 'Записаться' достигнута");

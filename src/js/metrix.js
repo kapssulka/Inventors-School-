@@ -68,3 +68,38 @@ if (programButtons.length > 0) {
     });
   });
 }
+
+// Кнопки «Номер телефона»
+const phoneButtons = document.querySelectorAll('[data-metric="phone_click"]');
+
+if (phoneButtons.length > 0) {
+  phoneButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      ym(COUNTER_ID, "reachGoal", "phone_click", {
+        section: button.dataset.section,
+      });
+
+      console.log("Цель 'Позвонить' достигнута");
+    });
+  });
+}
+
+// Кнопки «WhatsApp»
+const whatsappButtons = document.querySelectorAll(
+  '[data-metric="whatsapp_click"]',
+);
+
+if (whatsappButtons.length > 0) {
+  whatsappButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      ym(COUNTER_ID, "reachGoal", "whatsapp_click", {
+        section: button.dataset.section,
+        ...(button.dataset.placement && {
+          placement: button.dataset.placement,
+        }),
+      });
+
+      console.log("Цель 'Написать в WA' достигнута");
+    });
+  });
+}

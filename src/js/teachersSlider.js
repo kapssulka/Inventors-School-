@@ -31,12 +31,12 @@ if (teachersSlider) {
       pauseOnMouseEnter: true,
     },
 
-    breakpoints: {
-      900: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-    },
+    // breakpoints: {
+    //   900: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 16,
+    //   },
+    // },
 
     on: {
       init(swiper) {

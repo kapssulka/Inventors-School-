@@ -35,7 +35,7 @@
 
 //? КОД
 
-const COUNTER_ID = 112032088; // - Я.Метрика
+const COUNTER_ID = 112130500; // - Я.Метрика
 
 // Кнопки «Записаться»
 const signupButtons = document.querySelectorAll('[data-metric="cta_signup"]');
